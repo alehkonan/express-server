@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { addTechnology } from '../database/technologies/addTechnology';
-import { getTechnologies } from '../database/technologies/getTechnologies';
+import { addTechnology } from '../database/technologies/add';
+import { getTechnologies } from '../database/technologies/get';
 
 export const router = Router();
 
