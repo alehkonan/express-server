@@ -1,0 +1,50 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Tech {
+  id: ID!
+  name: String!
+  description: String
+  userId: Int
+  user: User
+  getUser: User!
+}
+
+type User {
+  id: Int!
+  firstName: String!
+  lastName: String!
+  techs: [Tech!]
+}
+
+type Query {
+  getTechs: [Tech!]!
+  getTech(id: Int!): Tech!
+  users: [User!]!
+  user(id: Int!): User!
+}
+
+type Mutation {
+  createTech(createTechInput: CreateTechInput!): Tech!
+  createUser(createUserInput: CreateUserInput!): User!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  removeUser(id: Int!): User!
+}
+
+input CreateTechInput {
+  name: String!
+  description: String
+  userId: Int!
+}
+
+input CreateUserInput {
+  firstName: String!
+  lastName: String!
+}
+
+input UpdateUserInput {
+  firstName: String
+  lastName: String
+  id: Int!
+}
