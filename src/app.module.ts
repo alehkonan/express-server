@@ -13,7 +13,7 @@ import { TasksModule } from './tasks/tasks.module';
       username: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
-      entities: ['**/*.entity{.ts,.js}'],
+      entities: ['dist/**/*.entity{.ts,.js}'],
       ssl: {
         rejectUnauthorized: false,
       },
