@@ -2,49 +2,29 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type Tech {
-  id: ID!
-  name: String!
-  description: String
-  userId: Int
-  user: User
-  getUser: User!
-}
-
-type User {
+type Task {
   id: Int!
-  firstName: String!
-  lastName: String!
-  techs: [Tech!]
+  name: String!
+  isDone: Boolean!
+  isDeleted: Boolean!
 }
 
 type Query {
-  getTechs: [Tech!]!
-  getTech(id: Int!): Tech!
-  users: [User!]!
-  user(id: Int!): User!
+  tasks: [Task!]!
+  task(id: Int!): Task!
 }
 
 type Mutation {
-  createTech(createTechInput: CreateTechInput!): Tech!
-  createUser(createUserInput: CreateUserInput!): User!
-  updateUser(updateUserInput: UpdateUserInput!): User!
-  removeUser(id: Int!): User!
+  createTask(createTaskInput: CreateTaskInput!): Task!
+  updateTask(updateTaskInput: UpdateTaskInput!): Task!
+  removeTask(id: Int!): Task!
 }
 
-input CreateTechInput {
+input CreateTaskInput {
   name: String!
-  description: String
-  userId: Int!
 }
 
-input CreateUserInput {
-  firstName: String!
-  lastName: String!
-}
-
-input UpdateUserInput {
-  firstName: String
-  lastName: String
+input UpdateTaskInput {
+  name: String
   id: Int!
 }

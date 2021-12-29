@@ -7,6 +7,6 @@ import { Technology } from './entities/technology.entity';
 @Module({
   controllers: [TechnologiesController],
   providers: [TechnologiesService],
-  imports: [TypeOrmModule.forFeature([Technology])]
+  imports: [TypeOrmModule.forFeature([Technology])],
 })
 export class TechnologiesModule {}
