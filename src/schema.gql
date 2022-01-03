@@ -6,7 +6,6 @@ type Task {
   id: Int!
   name: String!
   isDone: Boolean!
-  isDeleted: Boolean!
 }
 
 type Query {
@@ -27,4 +26,5 @@ input CreateTaskInput {
 input UpdateTaskInput {
   name: String
   id: Int!
+  isDone: Boolean = false
 }

@@ -15,8 +15,4 @@ export class Task {
   @Column({ default: false })
   @Field(() => Boolean, { defaultValue: false })
   isDone!: boolean;
-
-  @Column({ default: false })
-  @Field(() => Boolean, { defaultValue: false })
-  isDeleted!: boolean;
 }
